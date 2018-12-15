@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans:beans xmlns="http://www.springframework.org/schema/mvc"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xmlns:beans="http://www.springframework.org/schema/beans"
+             xsi:schemaLocation="http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--<aop:config>-->
+    <!--<aop:aspect ref="sessionFactoryManager">-->
+    <!--<aop:before method="beforeDaoMethodInvocation" pointcut="execution(* com.andrushenko.dao.impl.*.*(..))"/>-->
+    <!--<aop:after method="afterDaoMethodInvocation" pointcut="execution(* com.andrushenko.dao.impl.*.*(..))"/>-->
+    <!--<aop:around method="aroundDaoMethodInvocation" pointcut="execution(* com.andrushenko.dao.impl.*.*(..))"/>-->
+    <!--</aop:aspect>-->
+    <!--</aop:config>-->
+
+    <beans:bean id="sessionFactoryManager" class="com.andrushenko.aspect.SessionFactoryManagerAspect"/>
+
+</beans:beans>
